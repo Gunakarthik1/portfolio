@@ -5,6 +5,7 @@ import { ScrollAnimation } from "@/components/ScrollAnimation";
 import { CONTACT_INFO } from "@/config/contact";
 
 const Contact = () => {
+  const emailHref = `mailto:${CONTACT_INFO.email}?subject=Portfolio%20Inquiry%20-%20Software%20Engineer%20Opportunity&body=Hi%20Gunakarthik,%0D%0A%0D%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect%20regarding%20an%20opportunity.%0D%0A%0D%0AThanks.`;
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 max-w-5xl mx-auto">
       <ScrollAnimation>
@@ -19,7 +20,7 @@ const Contact = () => {
 
       <div className="mt-8 grid gap-4 md:grid-cols-2">
         <ScrollAnimation>
-          <a href={`mailto:${CONTACT_INFO.email}`} className="contact-card">
+          <a href={emailHref} className="contact-card">
             <Mail className="w-5 h-5 text-gray-300" />
             <span>{CONTACT_INFO.email}</span>
           </a>

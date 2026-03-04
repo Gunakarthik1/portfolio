@@ -12,6 +12,7 @@ const highlights = [
 ];
 
 const Home = () => {
+  const emailHref = `mailto:${CONTACT_INFO.email}?subject=Portfolio%20Inquiry%20-%20Software%20Engineer%20Opportunity&body=Hi%20Gunakarthik,%0D%0A%0D%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect%20regarding%20an%20opportunity.%0D%0A%0D%0AThanks.`;
   return (
     <div className="min-h-screen flex items-center justify-center px-4 pt-24 pb-16">
       <div className="w-full max-w-5xl mx-auto">
@@ -82,7 +83,7 @@ const Home = () => {
               <Linkedin className="w-4 h-4" aria-hidden="true" /> LinkedIn
             </a>
             <a
-              href={`mailto:${CONTACT_INFO.email}`}
+              href={emailHref}
               className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
             >
               <Mail className="w-4 h-4" aria-hidden="true" /> {CONTACT_INFO.email}
