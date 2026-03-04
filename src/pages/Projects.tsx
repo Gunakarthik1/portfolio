@@ -6,7 +6,7 @@ import { ScrollAnimation } from "@/components/ScrollAnimation";
 type Project = {
   title: string;
   summary: string;
-  image: string;
+  image?: string;
   imageClass?: string;
   github: string;
   live?: string;
@@ -50,14 +50,30 @@ const projects: Project[] = [
     title: "Hospital Database Management System",
     summary:
       "Relational DB + CRUD + reporting system for healthcare workflow management.",
-    image: "/projects_img/project-2.png",
+    image: "/projects_img/Hospital_dbms.png",
     imageClass: "object-center",
     github: "https://github.com/",
+    live: "https://drive.google.com/file/d/1_HdiZeyIvcTt0aFIjDuNRT6tmk0WUjlp/view",
     stack: ["SQL", "PostgreSQL/MySQL", "Backend"],
     bullets: [
       "Designed normalized relational schema.",
       "Implemented CRUD operations.",
       "Built reporting queries with indexing optimization.",
+    ],
+  },
+  {
+    title: "Personal Portfolio Website (This Project)",
+    summary:
+      "Interactive frontend portfolio built and deployed for recruiter-friendly navigation, with focused sections for experience, projects, education, and contact.",
+    image: "/projects_img/project-4.png",
+    imageClass: "object-top",
+    github: "https://github.com/guna29/portfolio",
+    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    bullets: [
+      "Designed a clean multi-page structure optimized for quick recruiter scanning.",
+      "Implemented responsive layouts, subtle animations, and reusable UI components.",
+      "Integrated resume download, project showcases, and updated academic/professional content.",
+      "Deployed and maintained as a live, production-style personal portfolio.",
     ],
   },
 ];
@@ -73,13 +89,19 @@ const Projects = () => {
         {projects.map((project) => (
           <ScrollAnimation key={project.title}>
             <article className="rounded-2xl border border-white/10 bg-black/45 backdrop-blur-sm overflow-hidden h-full">
-              <div className="w-full h-64 md:h-72 bg-black overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className={`w-full h-full object-cover ${project.imageClass ?? "object-center"}`}
-                />
-              </div>
+              {project.image ? (
+                <div className="w-full h-64 md:h-72 bg-black overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className={`w-full h-full object-cover ${project.imageClass ?? "object-center"}`}
+                  />
+                </div>
+              ) : (
+                <div className="w-full h-64 md:h-72 bg-gradient-to-br from-zinc-900 to-zinc-800 border-b border-white/10 flex items-center justify-center">
+                  <p className="text-sm text-gray-400">Add project screenshot</p>
+                </div>
+              )}
 
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-white">{project.title}</h3>

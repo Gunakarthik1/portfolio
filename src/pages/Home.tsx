@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, FileDown, Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, FileDown, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import Link from "next/link";
 import { CONTACT_INFO } from "@/config/contact";
 
@@ -21,10 +21,6 @@ const Home = () => {
           transition={{ duration: 0.45 }}
           className="rounded-2xl border border-white/10 bg-black/50 backdrop-blur-xl p-8 sm:p-10"
         >
-          <p className="text-sm uppercase tracking-[0.18em] text-gray-400 mb-5">
-            Software Engineer Portfolio
-          </p>
-
           <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-white">
             Gunakarthik Naidu Lanka
           </h1>
@@ -39,10 +35,6 @@ const Home = () => {
 
           <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-gray-300">
             <span className="inline-flex items-center gap-1.5"><MapPin className="w-4 h-4" /> {CONTACT_INFO.location}</span>
-            <span className="text-gray-600">|</span>
-            <span className="inline-flex items-center gap-1.5"><Phone className="w-4 h-4" /> {CONTACT_INFO.phone}</span>
-            <span className="text-gray-600">|</span>
-            <a href={`mailto:${CONTACT_INFO.email}`} className="inline-flex items-center gap-1.5 hover:text-white transition-colors"><Mail className="w-4 h-4" /> {CONTACT_INFO.email}</a>
           </div>
 
           <div className="mt-8 flex flex-wrap gap-3">

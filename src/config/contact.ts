@@ -1,8 +1,7 @@
 export const CONTACT_INFO = {
   name: "Gunakarthik Naidu Lanka",
   email: "gunakarthiknaidu@gmail.com",
-  phone: "+1 (480) 791-6573",
-  location: "Tempe, AZ",
+  location: "Tempe, Arizona",
   timezone: "MST (Arizona)",
   github: "https://github.com/",
   linkedin: "https://www.linkedin.com/in/gunakarthik-naidu-lanka",

@@ -17,7 +17,7 @@ const experiences: Experience[] = [
   {
     title: "Software Engineering Intern",
     company: "Velocity Tech (Zinio TalentHub)",
-    location: "Project",
+    location: "Remote",
     period: "Jan 2024 - Dec 2024",
     type: "Internship",
     description: [
@@ -54,6 +54,7 @@ const experiences: Experience[] = [
     description: [
       "Guided students in object-oriented programming, web application design, and software engineering fundamentals.",
       "Assisted in debugging, code reviews, and reinforcing clean coding standards and problem-solving.",
+      "Supported labs and mentoring in courses including Principles of Programming with C++, Principles of Programming, Digital Design Fundamentals, Introduction to Programming Languages, Data Structures and Algorithms, and Introduction to Software Engineering.",
     ],
     tech: ["OOP", "DSA", "Debugging", "Code Review"],
   },

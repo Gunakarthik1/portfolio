@@ -36,6 +36,15 @@ const Education = () => {
               <li>Strengthened system design, API architecture, and scalable application thinking.</li>
               <li>Applied graduate-level engineering rigor to production-style projects.</li>
             </ul>
+            <p className="text-sm text-gray-400 mt-4">Key graduate coursework:</p>
+            <ul className="mt-2 list-disc pl-5 text-sm text-gray-300 space-y-1">
+              <li>Data processing at scale and large-system data pipelines.</li>
+              <li>Software security and secure software development practices.</li>
+              <li>Software project, process, and quality management.</li>
+              <li>Data mining, semantic web mining, and knowledge representation.</li>
+              <li>Statistical machine learning and data visualization.</li>
+              <li>Special topics in blockchain engineering applications.</li>
+            </ul>
           </section>
         </ScrollAnimation>
 
@@ -50,6 +59,15 @@ const Education = () => {
               <li>Developed full-stack and backend projects using APIs, databases, and testing workflows.</li>
               <li>Prepared technical base for accelerated transition into master&apos;s-level study.</li>
             </ul>
+            <p className="text-sm text-gray-400 mt-4">Key undergraduate coursework:</p>
+            <ul className="mt-2 list-disc pl-5 text-sm text-gray-300 space-y-1">
+              <li>Programming fundamentals, object-oriented programming, and programming language concepts.</li>
+              <li>Computer organization, operating systems, and software engineering principles.</li>
+              <li>Data structures and algorithms with strong problem-solving foundations.</li>
+              <li>Database management, software quality assurance, and testing.</li>
+              <li>Machine learning foundations, capstone design, and applied project work.</li>
+              <li>Discrete mathematics, linear algebra, probability, and statistics for computing.</li>
+            </ul>
           </section>
         </ScrollAnimation>
 
@@ -60,6 +78,12 @@ const Education = () => {
             <ul className="mt-4 list-disc pl-5 text-gray-300 space-y-1">
               <li>Developed business context for product decisions and stakeholder communication.</li>
               <li>Improved ability to align technical implementation with practical business outcomes.</li>
+            </ul>
+            <p className="text-sm text-gray-400 mt-4">Business/economics coursework:</p>
+            <ul className="mt-2 list-disc pl-5 text-sm text-gray-300 space-y-1">
+              <li>Accounting and financial analysis.</li>
+              <li>Management strategy and marketing essentials.</li>
+              <li>Personal finance fundamentals and economic principles.</li>
             </ul>
           </section>
         </ScrollAnimation>
