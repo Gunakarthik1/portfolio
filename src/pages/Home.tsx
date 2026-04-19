@@ -6,9 +6,9 @@ import Link from "next/link";
 import { CONTACT_INFO } from "@/config/contact";
 
 const highlights = [
-  { label: "Focus", value: "Backend + Web Applications" },
-  { label: "Cloud", value: "AWS + Docker + CI/CD" },
-  { label: "Status", value: "Open to Entry-Level SWE Roles" },
+  { label: "Focus", value: "Distributed Systems + Agentic AI" },
+  { label: "Cloud", value: "AWS · Kubernetes · Docker · Terraform" },
+  { label: "Status", value: "Open to SWE Roles · MSCS Dec 2025" },
 ];
 
 const Home = () => {
@@ -27,11 +27,11 @@ const Home = () => {
           </h1>
 
           <h2 className="text-xl sm:text-2xl font-semibold text-gray-200 mt-4">
-            Software Engineer • Backend/Web Apps • AWS • APIs • Data & Systems Fundamentals
+            Software Engineer • Distributed Systems • Agentic AI • High-Performance Backend Microservices
           </h2>
 
           <p className="text-base sm:text-lg text-gray-400 mt-6 max-w-4xl leading-relaxed">
-            Computer Science graduate (GPA 4.0) with experience developing scalable web-based applications and backend services. Strong foundation across the full software development lifecycle (requirements &rarr; design &rarr; implementation &rarr; testing &rarr; deployment). Comfortable building REST APIs, integrating databases, and collaborating with business and technical stakeholders to deliver reliable solutions.
+            MSCS 2025 graduate (GPA 4.0) with 4+ years of software development practice. Specialized in architecting distributed systems, autonomous agentic workflows, and high-performance backend microservices. Expert in Python, Java, and TypeScript, with a proven track record of reducing system latency by 45% and automating complex manual processes for enterprise-scale platforms. Driven by a &ldquo;Show &gt; Tell&rdquo; philosophy and a deep commitment to engineering excellence and data sovereignty.
           </p>
 
           <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-gray-300">

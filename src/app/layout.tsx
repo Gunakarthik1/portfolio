@@ -29,8 +29,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={spaceGrotesk.className}>
-      <body>
+    <html lang="en" className={spaceGrotesk.className} suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <div className="min-h-screen flex flex-col">
           <Background3D />
           <Navbar />

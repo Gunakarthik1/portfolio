@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, ExternalLink } from "lucide-react";
+import { Github, ExternalLink, FileCode } from "lucide-react";
 import { ScrollAnimation } from "@/components/ScrollAnimation";
 
 type Project = {
@@ -8,26 +8,51 @@ type Project = {
   summary: string;
   image?: string;
   imageClass?: string;
-  github: string;
+  github?: string;
   live?: string;
+  codeLink?: string;
   stack: string[];
   bullets: string[];
 };
 
 const projects: Project[] = [
   {
-    title: "AI Meeting Assistant Web Application",
+    title: "HireAgent — Autonomous Browser Agent",
     summary:
-      "LLM-powered transcription + summaries + action items. Built a web-based application integrating OpenAI APIs for automated meeting transcription and structured action extraction.",
-    image: "/projects_img/project-1.png",
-    imageClass: "object-center",
-    github: "https://github.com/",
-    stack: ["Python", "REST", "OpenAI APIs", "SQL"],
+      "Self-correcting agentic system that automates multi-step job application workflows using a local LLM, achieving 98% task completion with zero cloud inference cost.",
+    github: "https://github.com/guna29/hireagent",
+    stack: ["TypeScript", "Playwright", "PostgreSQL", "Ollama", "LangGraph"],
     bullets: [
-      "Developed backend request routing and data processing.",
-      "Built secure REST endpoints.",
-      "Integrated SQL database storage.",
-      "Added functional testing and performance validation.",
+      "Architected a self-correcting 6-stage agentic state machine with a resilient error-recovery layer and exponential backoff, achieving 98% task completion rate.",
+      "Implemented DOM distillation to strip 90% of non-essential HTML, enabling local-first 7B LLM inference to navigate complex UIs with 95% accuracy at zero operational cost.",
+      "Designed PostgreSQL-backed session persistence so the agent resumes interrupted workflows without data loss.",
+    ],
+  },
+  {
+    title: "AutoAudit AI — Local-First Inference Engine",
+    summary:
+      "Zero-cloud vehicle auditing tool powered by locally hosted DeepSeek-R1/Gemma 3 models with GGUF quantization, guaranteeing 100% data privacy for sensitive industrial records.",
+    stack: ["C++", "Go", "GGUF Quantization", "Docker", "Ollama"],
+    bullets: [
+      "Designed a 'Zero-Cloud' auditing pipeline using locally hosted LLMs (DeepSeek-R1/Gemma 3) to ensure 100% data privacy for sensitive industrial records.",
+      "Applied Q4/Q5 GGUF quantization on Apple Silicon (M1 Pro), enabling complex reasoning within a 16GB VRAM budget.",
+      "Engineered a custom KV-cache management system reducing time-to-first-token (TTFT) by 30%, enabling near-instantaneous reasoning for real-time sensor data audits.",
+    ],
+  },
+  {
+    title: "Vin Sight",
+    summary:
+      "AI-powered vehicle valuation platform that delivers instant market pricing, NHTSA recall checks, and 12-month price projections using a 17-digit VIN — no keys or account needed.",
+    image: "/projects_img/vinsight.png",
+    imageClass: "object-top",
+    github: "https://github.com/guna29/vin-sight",
+    live: "https://vin-sight.onrender.com",
+    stack: ["React", "REST APIs", "NHTSA API", "TypeScript"],
+    bullets: [
+      "Built VIN-based asset evaluation engine pulling real NHTSA safety and recall data.",
+      "Implemented brand-specific market rate models for accurate regional pricing.",
+      "Designed a clean evaluation form with mileage, ZIP code, and condition inputs.",
+      "Delivered 12-month price projection insights alongside instant valuation results.",
     ],
   },
   {
@@ -36,7 +61,6 @@ const projects: Project[] = [
       "Full-stack community platform work completed during EPICS internship, focused on web features, backend API integration, and deployment in AWS environments.",
     image: "/projects_img/project-3.png",
     imageClass: "object-top",
-    github: "https://github.com/",
     live: "https://fosterarizona.org/",
     stack: ["Python", "REST APIs", "SQL", "Docker", "AWS"],
     bullets: [
@@ -52,28 +76,12 @@ const projects: Project[] = [
       "Relational DB + CRUD + reporting system for healthcare workflow management.",
     image: "/projects_img/Hospital_dbms.png",
     imageClass: "object-center",
-    github: "https://github.com/",
-    live: "https://drive.google.com/file/d/1_HdiZeyIvcTt0aFIjDuNRT6tmk0WUjlp/view",
+    codeLink: "https://drive.google.com/file/d/1_HdiZeyIvcTt0aFIjDuNRT6tmk0WUjlp/view",
     stack: ["SQL", "PostgreSQL/MySQL", "Backend"],
     bullets: [
       "Designed normalized relational schema.",
       "Implemented CRUD operations.",
       "Built reporting queries with indexing optimization.",
-    ],
-  },
-  {
-    title: "Personal Portfolio Website (This Project)",
-    summary:
-      "Interactive frontend portfolio built and deployed for recruiter-friendly navigation, with focused sections for experience, projects, education, and contact.",
-    image: "/projects_img/project-4.png",
-    imageClass: "object-top",
-    github: "https://github.com/guna29/portfolio",
-    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    bullets: [
-      "Designed a clean multi-page structure optimized for quick recruiter scanning.",
-      "Implemented responsive layouts, subtle animations, and reusable UI components.",
-      "Integrated resume download, project showcases, and updated academic/professional content.",
-      "Deployed and maintained as a live, production-style personal portfolio.",
     ],
   },
 ];
@@ -125,14 +133,26 @@ const Projects = () => {
                 </div>
 
                 <div className="mt-6 flex items-center gap-5 text-sm">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
-                  >
-                    <Github className="w-4 h-4" aria-hidden="true" /> Code
-                  </a>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+                    >
+                      <Github className="w-4 h-4" aria-hidden="true" /> Code
+                    </a>
+                  )}
+                  {project.codeLink && (
+                    <a
+                      href={project.codeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+                    >
+                      <FileCode className="w-4 h-4" aria-hidden="true" /> Code
+                    </a>
+                  )}
                   {project.live && (
                     <a
                       href={project.live}

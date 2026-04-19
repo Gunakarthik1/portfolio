@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <p className="text-xs text-gray-500 mt-8">© {new Date().getFullYear()} {CONTACT_INFO.name}</p>
+        <p className="text-xs text-gray-500 mt-8" suppressHydrationWarning>© {new Date().getFullYear()} {CONTACT_INFO.name}</p>
       </div>
     </footer>
   );

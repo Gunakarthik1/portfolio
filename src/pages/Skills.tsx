@@ -3,11 +3,30 @@
 import { ScrollAnimation } from "@/components/ScrollAnimation";
 
 const skillGroups = [
-  { category: "Languages", items: ["Java", "Python", "C++", "C#", "TypeScript"] },
-  { category: "Web / Backend", items: ["REST APIs", "Backend Services", "Microservices"] },
-  { category: "Databases", items: ["PostgreSQL", "MySQL", "MongoDB"] },
-  { category: "Cloud & DevOps", items: ["AWS", "Docker", "CI/CD", "Git"] },
-  { category: "Engineering Practices", items: ["Requirements Analysis", "Testing", "Debugging", "Agile"] },
+  {
+    category: "Languages",
+    items: ["Python", "Java (Spring Boot)", "TypeScript", "Node.js", "SQL (Postgres/MySQL)", "C++", "Go", "HTML/CSS"],
+  },
+  {
+    category: "AI / Agentic",
+    items: ["LangGraph", "RAG Pipelines", "Ollama", "Playwright", "GGUF Quantization", "Prompt Engineering", "Local LLM Inference"],
+  },
+  {
+    category: "Infrastructure",
+    items: ["AWS (EC2, S3, Lambda, Fargate)", "Docker", "Kubernetes", "Terraform (IaC)", "CI/CD", "GitHub Actions", "Linux"],
+  },
+  {
+    category: "Web / Backend",
+    items: ["React", "Next.js", "FastAPI", "REST APIs", "GraphQL", "WebSockets", "Redis", "RabbitMQ", "Drizzle ORM"],
+  },
+  {
+    category: "Databases",
+    items: ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
+  },
+  {
+    category: "Concepts",
+    items: ["System Design", "Distributed Systems", "Microservices", "Performance Optimization", "Security Compliance", "SDLC", "Agile"],
+  },
 ];
 
 const Skills = () => {
