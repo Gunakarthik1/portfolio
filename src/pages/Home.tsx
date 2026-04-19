@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, FileDown, Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { ArrowRight, FileDown, Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import { CONTACT_INFO } from "@/config/contact";
 
@@ -87,6 +87,12 @@ const Home = () => {
               className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
             >
               <Mail className="w-4 h-4" aria-hidden="true" /> {CONTACT_INFO.email}
+            </a>
+            <a
+              href={`tel:${CONTACT_INFO.phone}`}
+              className="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+            >
+              <Phone className="w-4 h-4" aria-hidden="true" /> {CONTACT_INFO.phone}
             </a>
           </div>
         </motion.div>

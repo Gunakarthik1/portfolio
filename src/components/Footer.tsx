@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import { CONTACT_INFO } from "@/config/contact";
 
 const Footer = () => {
@@ -25,6 +25,9 @@ const Footer = () => {
             </a>
             <a href={emailHref} className="text-gray-400 hover:text-white transition-colors" aria-label="Email">
               <Mail className="w-4 h-4" />
+            </a>
+            <a href={`tel:${CONTACT_INFO.phone}`} className="text-gray-400 hover:text-white transition-colors" aria-label="Phone">
+              <Phone className="w-4 h-4" />
             </a>
           </div>
         </div>
