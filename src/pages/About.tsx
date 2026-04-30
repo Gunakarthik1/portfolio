@@ -14,7 +14,7 @@ const About = () => {
           <div className="rounded-2xl border border-white/10 bg-black/45 backdrop-blur-sm overflow-hidden">
             <div className="aspect-[4/5] bg-white/[0.03]">
               <img
-                src="/profile/profile.jpg"
+                src="/profile/profile.png"
                 alt="Gunakarthik Naidu Lanka"
                 className="w-full h-full object-cover"
               />
