@@ -20,7 +20,7 @@ const projects: Project[] = [
     title: "HireAgent — Autonomous Browser Agent",
     summary:
       "Self-correcting agentic system that automates multi-step job application workflows using a local LLM, achieving 98% task completion with zero cloud inference cost.",
-    github: "https://github.com/guna29/hireagent",
+    github: "https://github.com/Gunakarthik1/hireagent",
     stack: ["TypeScript", "Playwright", "PostgreSQL", "Ollama", "LangGraph"],
     bullets: [
       "Architected a self-correcting 6-stage agentic state machine with a resilient error-recovery layer and exponential backoff, achieving 98% task completion rate.",
@@ -45,7 +45,7 @@ const projects: Project[] = [
       "AI-powered vehicle valuation platform that delivers instant market pricing, NHTSA recall checks, and 12-month price projections using a 17-digit VIN — no keys or account needed.",
     image: "/projects_img/vinsight.png",
     imageClass: "object-top",
-    github: "https://github.com/guna29/vin-sight",
+    github: "https://github.com/Gunakarthik1/vin-sight",
     live: "https://vin-sight.onrender.com",
     stack: ["React", "REST APIs", "NHTSA API", "TypeScript"],
     bullets: [
