@@ -29,30 +29,20 @@ const projects: Project[] = [
     ],
   },
   {
-    title: "AutoAudit AI — Local-First Inference Engine",
+    title: "Vin Sight — AI Vehicle Valuation Platform",
     summary:
-      "Zero-cloud vehicle auditing tool powered by locally hosted DeepSeek-R1/Gemma 3 models with GGUF quantization, guaranteeing 100% data privacy for sensitive industrial records.",
-    stack: ["C++", "Go", "GGUF Quantization", "Docker", "Ollama"],
-    bullets: [
-      "Designed a 'Zero-Cloud' auditing pipeline using locally hosted LLMs (DeepSeek-R1/Gemma 3) to ensure 100% data privacy for sensitive industrial records.",
-      "Applied Q4/Q5 GGUF quantization on Apple Silicon (M1 Pro), enabling complex reasoning within a 16GB VRAM budget.",
-      "Engineered a custom KV-cache management system reducing time-to-first-token (TTFT) by 30%, enabling near-instantaneous reasoning for real-time sensor data audits.",
-    ],
-  },
-  {
-    title: "Vin Sight",
-    summary:
-      "AI-powered vehicle valuation platform that delivers instant market pricing, NHTSA recall checks, and 12-month price projections using a 17-digit VIN — no keys or account needed.",
+      "Zero-cloud vehicle auditing and valuation platform powered by locally hosted LLMs and real NHTSA data — instant market pricing, recall checks, and 12-month projections with 100% data privacy. No API keys or account needed.",
     image: "/projects_img/vinsight.png",
     imageClass: "object-top",
     github: "https://github.com/Gunakarthik1/vin-sight",
     live: "https://vin-sight.onrender.com",
-    stack: ["React", "REST APIs", "NHTSA API", "TypeScript"],
+    stack: ["React", "TypeScript", "Express", "NHTSA API", "DeepSeek-R1", "Ollama", "GGUF Quantization", "Docker"],
     bullets: [
-      "Built VIN-based asset evaluation engine pulling real NHTSA safety and recall data.",
-      "Implemented brand-specific market rate models for accurate regional pricing.",
-      "Designed a clean evaluation form with mileage, ZIP code, and condition inputs.",
-      "Delivered 12-month price projection insights alongside instant valuation results.",
+      "Designed a 'Zero-Cloud' auditing pipeline using locally hosted LLMs (DeepSeek-R1/Gemma 3) to ensure 100% data privacy for sensitive industrial records.",
+      "Applied Q4/Q5 GGUF quantization on Apple Silicon (M1 Pro), enabling complex reasoning within a 16GB VRAM budget.",
+      "Engineered a custom KV-cache management system reducing time-to-first-token (TTFT) by 30%, enabling near-instantaneous reasoning for real-time sensor data audits.",
+      "Built VIN-based asset evaluation engine pulling real NHTSA safety and recall data with brand-specific depreciation models for accurate regional pricing.",
+      "Delivered 12-month price projection insights and hold/sell recommendations alongside instant valuation results.",
     ],
   },
   {
