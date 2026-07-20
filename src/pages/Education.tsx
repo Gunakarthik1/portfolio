@@ -18,7 +18,7 @@ const Education = () => {
           />
           <div>
             <h3 className="text-xl font-semibold text-white">Arizona State University</h3>
-            <p className="text-sm text-gray-400">Tempe, AZ • Accelerated (4+1) degree Majoring in Computer Science with a minor in Business</p>
+            <p className="text-sm text-gray-400">Tracy, CA • Accelerated (4+1) degree Majoring in Computer Science with a minor in Business</p>
           </div>
         </div>
       </ScrollAnimation>
