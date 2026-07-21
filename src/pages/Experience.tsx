@@ -31,7 +31,7 @@ const experiences: Experience[] = [
   {
     title: "Full Stack Intern",
     company: "EPICS (Foster Arizona Platform)",
-    location: "Tracy, CA",
+    location: "Tempe, AZ",
     period: "Jan 2022 - May 2022",
     type: "Internship",
     description: [
@@ -45,7 +45,7 @@ const experiences: Experience[] = [
   {
     title: "Teaching Assistant",
     company: "Arizona State University",
-    location: "Tracy, CA",
+    location: "Tempe, AZ",
     period: "Jan 2023 - Dec 2024",
     type: "Teaching",
     description: [
