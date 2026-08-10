@@ -8,12 +8,25 @@ type Experience = {
   company: string;
   location: string;
   period: string;
-  type: "Internship" | "Teaching";
+  type: "Full-time" | "Internship" | "Teaching";
   description: string[];
   tech: string[];
 };
 
 const experiences: Experience[] = [
+  {
+    title: "Data Analyst — AI Research",
+    company: "IBU Solutions (Integrated Travel)",
+    location: "Remote",
+    period: "Jan 2026 – Present",
+    type: "Full-time",
+    description: [
+      "Built and maintained a weekly Python automation pipeline (data collection, analysis, delivery) supporting a 6-paper research series spanning 14 cities, reducing manual reporting effort.",
+      "Wrote Python scripts for quantitative data analysis — CAGR forecasting and cost-differential modeling — using pandas, documenting each workflow for reuse.",
+      "Collaborated with cross-functional stakeholders to translate ambiguous requirements into structured, automated reporting deliverables.",
+    ],
+    tech: ["Python", "Pandas", "Data Analysis", "REST APIs", "Workflow Automation", "Technical Documentation"],
+  },
   {
     title: "Software Engineering Intern",
     company: "Velocity Tech (Zinio TalentHub)",
@@ -72,6 +85,7 @@ const Experience = () => {
                 <div>
                   <h3 className="text-xl font-semibold text-white flex items-center gap-2">
                     {exp.type === "Teaching" ? <GraduationCap className="w-5 h-5" /> : <Briefcase className="w-5 h-5" />}
+                  {exp.type === "Full-time" && <span className="ml-1 text-xs font-medium text-emerald-400 border border-emerald-500/30 bg-emerald-500/10 px-2 py-0.5 rounded-full">Full-time</span>}
                     {exp.title}
                   </h3>
                   <p className="text-gray-300 mt-1">{exp.company}</p>
