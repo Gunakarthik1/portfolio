@@ -222,7 +222,7 @@ const Projects = () => {
               </li>
               <li className="flex gap-2.5">
                 <span className="text-emerald-500 mt-0.5 shrink-0">▸</span>
-                Implemented the fix in <code className="text-emerald-400 bg-white/5 px-1.5 py-0.5 rounded text-sm font-mono">sklearn/feature_selection/_rfe.py</code>, following scikit-learn&apos;s contribution guidelines including changelog entry and docstring conventions.
+                <span>Implemented the fix in <code className="text-emerald-400 bg-white/5 px-1.5 py-0.5 rounded text-sm font-mono break-all">sklearn/feature_selection/_rfe.py</code> following scikit-learn&apos;s contribution guidelines, including changelog entry and docstring conventions.</span>
               </li>
               <li className="flex gap-2.5">
                 <span className="text-emerald-500 mt-0.5 shrink-0">▸</span>
