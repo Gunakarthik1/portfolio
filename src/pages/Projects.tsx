@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, ExternalLink, FileCode } from "lucide-react";
+import { Github, ExternalLink, FileCode, GitPullRequest, Star } from "lucide-react";
 import { ScrollAnimation } from "@/components/ScrollAnimation";
 
 type Project = {
@@ -159,6 +159,90 @@ const Projects = () => {
           </ScrollAnimation>
         ))}
       </div>
+
+      {/* Open Source Contributions */}
+      <ScrollAnimation>
+        <h2 className="text-3xl sm:text-4xl font-bold text-white mt-20">Open Source</h2>
+        <p className="text-gray-400 mt-2 text-sm">Real-world contributions to production codebases used by thousands of developers.</p>
+      </ScrollAnimation>
+
+      <ScrollAnimation>
+        <article className="mt-6 rounded-2xl border border-emerald-500/20 bg-emerald-950/10 backdrop-blur-sm overflow-hidden">
+          {/* Top accent bar */}
+          <div className="h-1 w-full bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-600" />
+
+          <div className="p-6 sm:p-8">
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+              <div className="flex-1">
+                <div className="flex items-center gap-2 text-emerald-400 text-xs font-semibold uppercase tracking-widest mb-2">
+                  <GitPullRequest className="w-3.5 h-3.5" />
+                  Merged Pull Request
+                </div>
+                <h3 className="text-xl font-semibold text-white">
+                  Open Source Contribution —{" "}
+                  <a
+                    href="https://github.com/scikit-learn/scikit-learn/pull/34685"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-400 hover:text-emerald-300 transition-colors underline underline-offset-4"
+                  >
+                    scikit-learn
+                  </a>
+                </h3>
+                <p className="text-gray-400 text-sm mt-1 flex items-center gap-1.5">
+                  Python Machine Learning Library
+                  <span className="text-gray-600">·</span>
+                  <Star className="w-3.5 h-3.5 text-yellow-400" aria-hidden="true" />
+                  <span>60k+ GitHub Stars</span>
+                </p>
+              </div>
+
+              <a
+                href="https://github.com/scikit-learn/scikit-learn/pull/34685"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-400/50 transition-all self-start whitespace-nowrap"
+              >
+                <GitPullRequest className="w-4 h-4" />
+                View PR #34685
+              </a>
+            </div>
+
+            <p className="text-gray-300 mt-5 leading-relaxed">
+              Contributed a new feature to scikit-learn&apos;s <code className="text-emerald-400 bg-white/5 px-1.5 py-0.5 rounded text-sm font-mono">RFECV</code> class
+              by implementing the <code className="text-emerald-400 bg-white/5 px-1.5 py-0.5 rounded text-sm font-mono">elimination_order_</code> attribute,
+              which exposes the per-step order in which features are eliminated during recursive feature elimination —
+              previously discarded information users couldn&apos;t access.
+            </p>
+
+            <ul className="mt-4 space-y-2 text-gray-300">
+              <li className="flex gap-2.5">
+                <span className="text-emerald-500 mt-0.5 shrink-0">▸</span>
+                Set up a full local development environment using a Docker dev container with micromamba; debugged a BLAS/aarch64 incompatibility on Apple Silicon and built scikit-learn from source.
+              </li>
+              <li className="flex gap-2.5">
+                <span className="text-emerald-500 mt-0.5 shrink-0">▸</span>
+                Implemented the fix in <code className="text-emerald-400 bg-white/5 px-1.5 py-0.5 rounded text-sm font-mono">sklearn/feature_selection/_rfe.py</code>, following scikit-learn&apos;s contribution guidelines including changelog entry and docstring conventions.
+              </li>
+              <li className="flex gap-2.5">
+                <span className="text-emerald-500 mt-0.5 shrink-0">▸</span>
+                Wrote a unit test suite — <span className="text-white font-medium">60 tests passing, 0 regressions</span>.
+              </li>
+            </ul>
+
+            <div className="flex flex-wrap gap-2 mt-6">
+              {["Python", "scikit-learn", "pytest", "Docker", "micromamba", "Git"].map((item) => (
+                <span
+                  key={item}
+                  className="px-2.5 py-1 rounded-md text-xs font-medium bg-emerald-500/10 border border-emerald-500/20 text-emerald-300"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </article>
+      </ScrollAnimation>
     </div>
   );
 };
