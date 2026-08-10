@@ -8,7 +8,7 @@ type Experience = {
   company: string;
   location: string;
   period: string;
-  type: "Internship" | "Teaching";
+  type: "Job" | "Internship" | "Teaching";
   description: string[];
   tech: string[];
 };
@@ -19,7 +19,7 @@ const experiences: Experience[] = [
     company: "IBU Solutions (Integrated Travel)",
     location: "Remote",
     period: "Jan 2026 – Present",
-    type: "Internship",
+    type: "Job",
     description: [
       "Built and maintained a weekly Python automation pipeline (data collection, analysis, delivery) supporting a 6-paper research series spanning 14 cities, reducing manual reporting effort.",
       "Wrote Python scripts for quantitative data analysis — CAGR forecasting and cost-differential modeling — using pandas, documenting each workflow for reuse.",
