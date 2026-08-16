@@ -7,7 +7,8 @@ Professional software engineering portfolio built with Next.js, React, Tailwind 
 This portfolio highlights:
 - Backend and full-stack engineering focus
 - Professional experience (Velocity Tech, EPICS, ASU Teaching Assistant)
-- Projects (AI Meeting Assistant, Foster Arizona Platform, Hospital DBMS)
+- Projects (GPU Cluster Telemetry, HireAgent, Vin Sight, Foster Arizona Platform, Hospital DBMS)
+- Open source contributions (scikit-learn — merged PR #34685)
 - Education (ASU accelerated 4+1 Computer Science track with Business minor)
 
 ## Tech Stack

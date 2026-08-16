@@ -17,6 +17,20 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: "GPU Cluster Telemetry & Automated Node Doctor",
+    summary:
+      "Production-grade distributed telemetry daemon and health orchestrator for AI/HPC Linux compute nodes. Collects GPU and host metrics, streams to a FastAPI gateway, runs Pandas sliding-window analytics, exposes Prometheus metrics, and autonomously executes remediation actions when thresholds are breached.",
+    github: "https://github.com/Gunakarthik1/gpu-cluster-telemetry",
+    live: "https://gunakarthik1.github.io/gpu-cluster-telemetry/frontend/",
+    stack: ["Python", "FastAPI", "Pandas", "Prometheus", "Grafana", "SQLAlchemy", "Docker", "pynvml", "psutil", "pytest"],
+    bullets: [
+      "Built a low-level GPU telemetry daemon using pynvml and psutil to sample VRAM, thermals, power draw, CPU, RAM, disk, and TCP socket states every 5 seconds; implemented a realistic H100 simulation fallback for non-NVIDIA environments.",
+      "Designed a FastAPI ingestion gateway with Pydantic v2 validation, SQLAlchemy + SQLite persistence, and Prometheus gauges/counters exposed at /metrics — scraped by a provisioned Prometheus + Grafana stack via Docker Compose.",
+      "Implemented a Pandas sliding-window analytics engine (per-node ring buffer, 1000-row deque) detecting thermal breaches (>80°C), VRAM saturation (>95%), and TCP TIME_WAIT spikes (>100) — dispatching ISOLATE_NODE and FLUSH_TEMP_CACHE remediation handlers automatically.",
+      "Wrote 60 pytest tests covering unit, integration, and mocked HTTP scenarios with zero external dependencies — using StaticPool in-memory SQLite for full isolation.",
+    ],
+  },
+  {
     title: "HireAgent — Autonomous Browser Agent",
     summary:
       "Self-correcting agentic system that automates multi-step job application workflows using a local LLM, achieving 98% task completion with zero cloud inference cost.",
