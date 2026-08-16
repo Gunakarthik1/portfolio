@@ -20,6 +20,8 @@ const projects: Project[] = [
     title: "GPU Cluster Telemetry & Automated Node Doctor",
     summary:
       "Production-grade distributed telemetry daemon and health orchestrator for AI/HPC Linux compute nodes. Collects GPU and host metrics, streams to a FastAPI gateway, runs Pandas sliding-window analytics, exposes Prometheus metrics, and autonomously executes remediation actions when thresholds are breached.",
+    image: "/projects_img/gpu-telemetry.png",
+    imageClass: "object-top",
     github: "https://github.com/Gunakarthik1/gpu-cluster-telemetry",
     live: "https://gunakarthik1.github.io/gpu-cluster-telemetry/frontend/",
     stack: ["Python", "FastAPI", "Pandas", "Prometheus", "Grafana", "SQLAlchemy", "Docker", "pynvml", "psutil", "pytest"],
