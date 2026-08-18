@@ -33,6 +33,18 @@ const certifications: Certification[] = [
     brandText: "text-[#e07060]",
   },
   {
+    title: "AI Infrastructure: Introduction to AI Hypercomputer",
+    issuer: "Google Cloud",
+    issued: "Aug 2026",
+    credentialId: "K6LYXGBG3024",
+    url: "https://coursera.org/verify/K6LYXGBG3024",
+    description:
+      "Completed Google Cloud's course on AI Hypercomputer architecture — covering the hardware and software stack behind large-scale AI training and inference, including TPU/GPU cluster design, high-bandwidth interconnects, distributed memory systems, and Google's AI-optimized infrastructure used for training frontier models.",
+    brandBar: "from-[#4285F4] via-[#34A853] to-[#EA4335]",
+    brandBg: "bg-[#4285F4]/[0.05]",
+    brandText: "text-[#6ba4f7]",
+  },
+  {
     title: "AI Open Source Capstone Certificate",
     issuer: "CodePath",
     issued: "Aug 2026",
