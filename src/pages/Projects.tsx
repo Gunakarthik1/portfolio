@@ -47,18 +47,17 @@ const projects: Project[] = [
   {
     title: "Vin Sight — AI Vehicle Valuation Platform",
     summary:
-      "Zero-cloud vehicle auditing and valuation platform powered by locally hosted LLMs and real NHTSA data — instant market pricing, recall checks, and 12-month projections with 100% data privacy. No API keys or account needed.",
+      "Vehicle valuation engine combining NHTSA recall data, brand-specific depreciation models, and local Ollama LLM (DeepSeek-R1/Gemma 3) for hold/sell recommendations. TTL cache eliminates repeat API calls. Confidence-weighted valuation bands ±12%/±18%.",
     image: "/projects_img/vinsight.png",
     imageClass: "object-top",
     github: "https://github.com/Gunakarthik1/vin-sight",
     live: "https://vin-sight.onrender.com",
-    stack: ["React", "TypeScript", "Express", "NHTSA API", "DeepSeek-R1", "Ollama", "GGUF Quantization", "Docker"],
+    stack: ["Node.js", "TypeScript", "Express", "Ollama", "NHTSA API", "React", "Chart.js"],
     bullets: [
-      "Designed a 'Zero-Cloud' auditing pipeline using locally hosted LLMs (DeepSeek-R1/Gemma 3) to ensure 100% data privacy for sensitive industrial records.",
-      "Applied Q4/Q5 GGUF quantization on Apple Silicon (M1 Pro), enabling complex reasoning within a 16GB VRAM budget.",
-      "Engineered a custom KV-cache management system reducing time-to-first-token (TTFT) by 30%, enabling near-instantaneous reasoning for real-time sensor data audits.",
       "Built VIN-based asset evaluation engine pulling real NHTSA safety and recall data with brand-specific depreciation models for accurate regional pricing.",
-      "Delivered 12-month price projection insights and hold/sell recommendations alongside instant valuation results.",
+      "Integrated local Ollama LLM (DeepSeek-R1/Gemma 3) for hold/sell recommendations with confidence-weighted valuation bands of ±12%/±18%.",
+      "Implemented TTL cache layer eliminating repeat API calls and reducing latency for returning users.",
+      "Delivered 12-month price projection insights alongside instant valuation results.",
     ],
   },
   {
@@ -88,6 +87,90 @@ const projects: Project[] = [
       "Designed normalized relational schema.",
       "Implemented CRUD operations.",
       "Built reporting queries with indexing optimization.",
+    ],
+  },
+  {
+    title: "Enterprise Hybrid-RAG & Semantic Cache Gateway",
+    summary:
+      "Production RAG API combining BM25 sparse retrieval and FAISS dense search with Reciprocal Rank Fusion reranking. Semantic cache layer (cosine similarity threshold 0.96) eliminates redundant LLM calls. Streams responses via SSE.",
+    image: "/projects_img/hybrid-rag.png",
+    imageClass: "object-top",
+    github: "https://github.com/Gunakarthik1/hybrid-rag-gateway",
+    stack: ["Python", "FastAPI", "FAISS", "BM25", "Pydantic", "Docker", "pytest", "SSE"],
+    bullets: [
+      "Combined BM25 sparse retrieval and FAISS dense search with Reciprocal Rank Fusion reranking for high-quality document retrieval.",
+      "Implemented semantic cache layer with cosine similarity threshold 0.96 to eliminate redundant LLM calls and cut latency.",
+      "Streamed responses to clients via Server-Sent Events (SSE) for real-time output delivery.",
+    ],
+  },
+  {
+    title: "High-Throughput Distributed LLM Inference Engine",
+    summary:
+      "LLM serving engine with PagedAttention KV-cache simulation, priority-queue continuous batching scheduler, and real-time WebSocket dashboard. Tracks p50/p95/p99 TTFT percentiles with Prometheus metrics.",
+    image: "/projects_img/llm-inference.png",
+    imageClass: "object-top",
+    github: "https://github.com/Gunakarthik1/llm-inference-engine",
+    stack: ["Python", "FastAPI", "WebSocket", "Prometheus", "asyncio", "Docker", "pytest"],
+    bullets: [
+      "Implemented PagedAttention KV-cache simulation and priority-queue continuous batching scheduler for high-throughput serving.",
+      "Built real-time WebSocket dashboard surfacing p50/p95/p99 TTFT percentile metrics live.",
+      "Exposed Prometheus metrics endpoint for observability integration with existing monitoring stacks.",
+    ],
+  },
+  {
+    title: "Distributed Lakehouse ETL & Data Quality Pipeline",
+    summary:
+      "Medallion architecture ETL (Bronze/Silver/Gold) with 6 configurable data quality rules, quarantine layer, lineage tracking, and Parquet-backed aggregations. React-style dashboard shows pipeline health in real time.",
+    image: "/projects_img/lakehouse-etl.png",
+    imageClass: "object-top",
+    github: "https://github.com/Gunakarthik1/lakehouse-etl-pipeline",
+    stack: ["Python", "FastAPI", "Pandas", "Parquet", "SQLite", "Docker", "pytest"],
+    bullets: [
+      "Designed Bronze/Silver/Gold medallion architecture with 6 configurable data quality rules and a quarantine layer for failed records.",
+      "Implemented full lineage tracking so every record's transformation history is auditable end-to-end.",
+      "Stored aggregations in Parquet with a real-time dashboard exposing pipeline health metrics.",
+    ],
+  },
+  {
+    title: "Enterprise AI Gateway & Data Privacy Firewall",
+    summary:
+      "7-stage AI proxy pipeline: rate limiting (token bucket), budget enforcement, prompt injection detection, PII masking (SSN/email/phone/credit card with Luhn validation), upstream LLM call, PII unmasking, and structured audit logging.",
+    image: "/projects_img/ai-privacy.png",
+    imageClass: "object-top",
+    github: "https://github.com/Gunakarthik1/ai-privacy-gateway",
+    stack: ["Python", "FastAPI", "SQLite", "Pydantic", "Docker", "pytest", "Regex"],
+    bullets: [
+      "Built a 7-stage proxy pipeline covering rate limiting, budget enforcement, prompt injection detection, PII masking, LLM call, unmasking, and audit logging.",
+      "Implemented PII masking for SSN, email, phone, and credit cards with Luhn checksum validation before any data leaves the perimeter.",
+      "Persisted structured audit logs to SQLite for compliance and forensic traceability of every request.",
+    ],
+  },
+  {
+    title: "LLM-as-a-Judge Benchmark & Agent Evaluation Harness",
+    summary:
+      "Evaluation framework that scores LLM outputs across faithfulness, relevance, coherence, and completeness using rubric-based LLM-as-a-Judge scoring. Includes adversarial test generation and HTML/JSON reporting.",
+    image: "/projects_img/llm-eval.png",
+    imageClass: "object-top",
+    github: "https://github.com/Gunakarthik1/llm-eval-harness",
+    stack: ["Python", "FastAPI", "Pydantic", "asyncio", "Docker", "pytest"],
+    bullets: [
+      "Scored LLM outputs across faithfulness, relevance, coherence, and completeness with rubric-based LLM-as-a-Judge grading.",
+      "Generated adversarial test cases automatically to stress-test model robustness.",
+      "Produced structured HTML and JSON reports for easy diff-ing across model versions.",
+    ],
+  },
+  {
+    title: "NeighborhoodPulse — Multi-Agent Neighborhood Risk Platform",
+    summary:
+      "Concurrent multi-agent platform that gathers FEMA flood data, zoning codes, and climate risk in parallel, then synthesizes a structured risk report with inline citations, weighted risk scores (0–100), and actionable recommendations.",
+    image: "/projects_img/neighborhood-pulse.png",
+    imageClass: "object-top",
+    github: "https://github.com/Gunakarthik1/neighborhood-pulse",
+    stack: ["Python", "FastAPI", "asyncio", "Pydantic", "SQLite", "Docker", "pytest"],
+    bullets: [
+      "Ran FEMA flood data, zoning code, and climate risk agents concurrently with asyncio for sub-second parallel data gathering.",
+      "Synthesized a structured risk report with inline citations and weighted risk scores on a 0–100 scale.",
+      "Delivered actionable recommendations ranked by risk severity for each neighborhood query.",
     ],
   },
 ];
