@@ -96,6 +96,7 @@ const projects: Project[] = [
     image: "/projects_img/hybrid-rag.png",
     imageClass: "object-top",
     github: "https://github.com/Gunakarthik1/hybrid-rag-gateway",
+    live: "https://gunakarthik1.github.io/hybrid-rag-gateway/frontend/",
     stack: ["Python", "FastAPI", "FAISS", "BM25", "Pydantic", "Docker", "pytest", "SSE"],
     bullets: [
       "Combined BM25 sparse retrieval and FAISS dense search with Reciprocal Rank Fusion reranking for high-quality document retrieval.",
@@ -110,6 +111,7 @@ const projects: Project[] = [
     image: "/projects_img/llm-inference.png",
     imageClass: "object-top",
     github: "https://github.com/Gunakarthik1/llm-inference-engine",
+    live: "https://gunakarthik1.github.io/llm-inference-engine/frontend/",
     stack: ["Python", "FastAPI", "WebSocket", "Prometheus", "asyncio", "Docker", "pytest"],
     bullets: [
       "Implemented PagedAttention KV-cache simulation and priority-queue continuous batching scheduler for high-throughput serving.",
@@ -124,6 +126,7 @@ const projects: Project[] = [
     image: "/projects_img/lakehouse-etl.png",
     imageClass: "object-top",
     github: "https://github.com/Gunakarthik1/lakehouse-etl-pipeline",
+    live: "https://gunakarthik1.github.io/lakehouse-etl-pipeline/frontend/",
     stack: ["Python", "FastAPI", "Pandas", "Parquet", "SQLite", "Docker", "pytest"],
     bullets: [
       "Designed Bronze/Silver/Gold medallion architecture with 6 configurable data quality rules and a quarantine layer for failed records.",
@@ -138,6 +141,7 @@ const projects: Project[] = [
     image: "/projects_img/ai-privacy.png",
     imageClass: "object-top",
     github: "https://github.com/Gunakarthik1/ai-privacy-gateway",
+    live: "https://gunakarthik1.github.io/ai-privacy-gateway/frontend/",
     stack: ["Python", "FastAPI", "SQLite", "Pydantic", "Docker", "pytest", "Regex"],
     bullets: [
       "Built a 7-stage proxy pipeline covering rate limiting, budget enforcement, prompt injection detection, PII masking, LLM call, unmasking, and audit logging.",
@@ -152,6 +156,7 @@ const projects: Project[] = [
     image: "/projects_img/llm-eval.png",
     imageClass: "object-top",
     github: "https://github.com/Gunakarthik1/llm-eval-harness",
+    live: "https://gunakarthik1.github.io/llm-eval-harness/frontend/",
     stack: ["Python", "FastAPI", "Pydantic", "asyncio", "Docker", "pytest"],
     bullets: [
       "Scored LLM outputs across faithfulness, relevance, coherence, and completeness with rubric-based LLM-as-a-Judge grading.",
@@ -166,6 +171,7 @@ const projects: Project[] = [
     image: "/projects_img/neighborhood-pulse.png",
     imageClass: "object-top",
     github: "https://github.com/Gunakarthik1/neighborhood-pulse",
+    live: "https://gunakarthik1.github.io/neighborhood-pulse/frontend/",
     stack: ["Python", "FastAPI", "asyncio", "Pydantic", "SQLite", "Docker", "pytest"],
     bullets: [
       "Ran FEMA flood data, zoning code, and climate risk agents concurrently with asyncio for sub-second parallel data gathering.",
