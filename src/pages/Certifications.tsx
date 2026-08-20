@@ -170,12 +170,6 @@ const Certifications = () => {
           </ScrollAnimation>
         ))}
 
-        {/* Placeholder for future certs */}
-        <ScrollAnimation>
-          <div className="rounded-2xl border border-dashed border-white/10 bg-transparent p-6 sm:p-8 text-center">
-            <p className="text-gray-600 text-sm">More certifications coming soon.</p>
-          </div>
-        </ScrollAnimation>
       </div>
 
       {/* ── Open Source Contribution ────────────────────────── */}
