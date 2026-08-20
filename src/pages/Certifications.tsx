@@ -56,6 +56,50 @@ const certifications: Certification[] = [
     brandBg: "bg-[#00C853]/[0.05]",
     brandText: "text-[#4cde7e]",
   },
+  {
+    title: "AI Infrastructure and Operations Fundamentals",
+    issuer: "NVIDIA",
+    issued: "Aug 2026",
+    url: "https://coursera.org/share/d4cb2ceea8d5be8ee2809df645706e48",
+    description:
+      "Completed NVIDIA's course on AI infrastructure and operations — covering GPU architectures, AI data center design, cluster networking, storage systems, and operational best practices for deploying and managing large-scale AI workloads. Scored 96%.",
+    brandBar: "from-[#76B900] via-[#8fd400] to-[#76B900]",
+    brandBg: "bg-[#76B900]/[0.05]",
+    brandText: "text-[#8fd400]",
+  },
+  {
+    title: "AI Infrastructure: Cloud TPUs",
+    issuer: "Google Cloud",
+    issued: "Aug 2026",
+    url: "https://coursera.org/share/3d974fc3b9a3abd143737e1ac93ddc93",
+    description:
+      "Completed Google Cloud's deep-dive on Cloud TPU architecture — covering TPU v4/v5 hardware design, systolic array computation, XLA compilation, distributed TPU pod configurations, and best practices for training large-scale ML models on Google's TPU infrastructure. Scored 100%.",
+    brandBar: "from-[#4285F4] via-[#34A853] to-[#EA4335]",
+    brandBg: "bg-[#4285F4]/[0.05]",
+    brandText: "text-[#6ba4f7]",
+  },
+  {
+    title: "AI Infrastructure: Cloud GPUs",
+    issuer: "Google Cloud",
+    issued: "Aug 2026",
+    url: "https://coursera.org/share/598229a30ecac27f2676cd4a3e4dc247",
+    description:
+      "Completed Google Cloud's course on Cloud GPU infrastructure — covering NVIDIA A100/H100 GPU provisioning on GCP, GPU-to-GPU NVLink interconnects, CUDA/cuDNN optimization, multi-GPU distributed training strategies, and cost-efficient GPU cluster management. Scored 100%.",
+    brandBar: "from-[#4285F4] via-[#34A853] to-[#EA4335]",
+    brandBg: "bg-[#4285F4]/[0.05]",
+    brandText: "text-[#6ba4f7]",
+  },
+  {
+    title: "Foundations of Site Reliability Engineering",
+    issuer: "Simplilearn",
+    issued: "Aug 2026",
+    url: "https://coursera.org/share/a31e29998006997a54cb2d4a27bd8776",
+    description:
+      "Completed Simplilearn's SRE foundations course — covering SLOs/SLAs/SLIs, error budgets, toil reduction, incident management, blameless postmortems, capacity planning, and the cultural and operational principles that underpin Site Reliability Engineering at scale. Scored 99.22%.",
+    brandBar: "from-[#FF6B35] via-[#ff8c5a] to-[#FF6B35]",
+    brandBg: "bg-[#FF6B35]/[0.05]",
+    brandText: "text-[#ff8c5a]",
+  },
 ];
 
 const Certifications = () => {
