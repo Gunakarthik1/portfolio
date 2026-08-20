@@ -1,6 +1,6 @@
 "use client";
 
-import { ExternalLink, Award, BadgeCheck, GitPullRequest, Star } from "lucide-react";
+import { ExternalLink, BadgeCheck, GitPullRequest, Star } from "lucide-react";
 import { ScrollAnimation } from "@/components/ScrollAnimation";
 
 type Certification = {
@@ -11,6 +11,7 @@ type Certification = {
   credentialId?: string;
   url: string;
   description: string;
+  logo: string;
   /** Tailwind classes for the branded top-bar gradient */
   brandBar: string;
   /** Tailwind classes for the subtle card background tint */
@@ -28,6 +29,7 @@ const certifications: Certification[] = [
     url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=D6E7676E2A49E0DC47E89DF8FB620DBC8DE1C3AAF8F18097DE768EF2809FBAC7",
     description:
       "Built and deployed agentic AI systems using LangChain, OpenAI Agents SDK, and real MCP servers on Oracle Cloud Infrastructure (OCI). Covered multi-agent orchestration, tool use, memory management, and enterprise AI deployment patterns.",
+    logo: "https://cdn.simpleicons.org/oracle/C74634",
     brandBar: "from-[#C74634] via-[#e05a47] to-[#C74634]",
     brandBg: "bg-[#C74634]/[0.06]",
     brandText: "text-[#e07060]",
@@ -40,6 +42,7 @@ const certifications: Certification[] = [
     url: "https://coursera.org/verify/K6LYXGBG3024",
     description:
       "Completed Google Cloud's course on AI Hypercomputer architecture — covering the hardware and software stack behind large-scale AI training and inference, including TPU/GPU cluster design, high-bandwidth interconnects, distributed memory systems, and Google's AI-optimized infrastructure used for training frontier models.",
+    logo: "https://cdn.simpleicons.org/googlecloud",
     brandBar: "from-[#4285F4] via-[#34A853] to-[#EA4335]",
     brandBg: "bg-[#4285F4]/[0.05]",
     brandText: "text-[#6ba4f7]",
@@ -52,6 +55,7 @@ const certifications: Certification[] = [
     url: "https://certificates.codepath.org/a304d57c-ff29-48a7-8d48-8263739e3a7e.pdf",
     description:
       "Certificate of Achievement — Honors — awarded by CodePath (CEO: Michael Ellison) in recognition of outstanding performance during the successful completion of the AI Open Source Capstone Course. Summer 2026 cohort.",
+    logo: "https://github.com/codepath.png?size=40",
     brandBar: "from-[#00C853] via-[#00e676] to-[#00C853]",
     brandBg: "bg-[#00C853]/[0.05]",
     brandText: "text-[#4cde7e]",
@@ -63,6 +67,7 @@ const certifications: Certification[] = [
     url: "https://coursera.org/share/d4cb2ceea8d5be8ee2809df645706e48",
     description:
       "Completed NVIDIA's course on AI infrastructure and operations — covering GPU architectures, AI data center design, cluster networking, storage systems, and operational best practices for deploying and managing large-scale AI workloads. Scored 96%.",
+    logo: "https://cdn.simpleicons.org/nvidia/76B900",
     brandBar: "from-[#76B900] via-[#8fd400] to-[#76B900]",
     brandBg: "bg-[#76B900]/[0.05]",
     brandText: "text-[#8fd400]",
@@ -74,6 +79,7 @@ const certifications: Certification[] = [
     url: "https://coursera.org/share/3d974fc3b9a3abd143737e1ac93ddc93",
     description:
       "Completed Google Cloud's deep-dive on Cloud TPU architecture — covering TPU v4/v5 hardware design, systolic array computation, XLA compilation, distributed TPU pod configurations, and best practices for training large-scale ML models on Google's TPU infrastructure. Scored 100%.",
+    logo: "https://cdn.simpleicons.org/googlecloud",
     brandBar: "from-[#4285F4] via-[#34A853] to-[#EA4335]",
     brandBg: "bg-[#4285F4]/[0.05]",
     brandText: "text-[#6ba4f7]",
@@ -85,6 +91,7 @@ const certifications: Certification[] = [
     url: "https://coursera.org/share/598229a30ecac27f2676cd4a3e4dc247",
     description:
       "Completed Google Cloud's course on Cloud GPU infrastructure — covering NVIDIA A100/H100 GPU provisioning on GCP, GPU-to-GPU NVLink interconnects, CUDA/cuDNN optimization, multi-GPU distributed training strategies, and cost-efficient GPU cluster management. Scored 100%.",
+    logo: "https://cdn.simpleicons.org/googlecloud",
     brandBar: "from-[#4285F4] via-[#34A853] to-[#EA4335]",
     brandBg: "bg-[#4285F4]/[0.05]",
     brandText: "text-[#6ba4f7]",
@@ -96,6 +103,7 @@ const certifications: Certification[] = [
     url: "https://coursera.org/share/a31e29998006997a54cb2d4a27bd8776",
     description:
       "Completed Simplilearn's SRE foundations course — covering SLOs/SLAs/SLIs, error budgets, toil reduction, incident management, blameless postmortems, capacity planning, and the cultural and operational principles that underpin Site Reliability Engineering at scale. Scored 99.22%.",
+    logo: "https://cdn.simpleicons.org/simplilearn/FF6B35",
     brandBar: "from-[#FF6B35] via-[#ff8c5a] to-[#FF6B35]",
     brandBg: "bg-[#FF6B35]/[0.05]",
     brandText: "text-[#ff8c5a]",
@@ -121,8 +129,13 @@ const Certifications = () => {
               <div className="p-6 sm:p-8">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex items-start gap-4">
-                    <div className="mt-1 flex-shrink-0 w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
-                      <Award className="w-5 h-5 text-gray-300" />
+                    <div className="mt-1 flex-shrink-0 w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden p-1.5">
+                      <img
+                        src={cert.logo}
+                        alt={cert.issuer}
+                        className="w-full h-full object-contain"
+                        loading="lazy"
+                      />
                     </div>
                     <div>
                       <p className={`text-xs font-semibold uppercase tracking-widest mb-1 ${cert.brandText}`}>
