@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Braces, Menu, X } from "lucide-react";
+import { Braces, Menu, X, Download } from "lucide-react";
 
 const navLinks = [
   { path: "/", label: "Home" },
@@ -41,6 +41,14 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
+            <a
+              href="/files/Gunakarthik_Naidu_Lanka_Resume.pdf"
+              download="Gunakarthik_Naidu_Lanka_Resume.pdf"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium bg-white text-black hover:bg-gray-200 transition-colors"
+            >
+              <Download className="w-4 h-4" />
+              Resume
+            </a>
           </div>
 
           <button
@@ -68,6 +76,15 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
+            <a
+              href="/files/Gunakarthik_Naidu_Lanka_Resume.pdf"
+              download="Gunakarthik_Naidu_Lanka_Resume.pdf"
+              className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium bg-white text-black hover:bg-gray-200 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <Download className="w-4 h-4" />
+              Download Resume
+            </a>
           </div>
         </div>
       )}
